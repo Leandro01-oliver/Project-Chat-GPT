@@ -1,12 +1,12 @@
-import axios from 'axios'
+import axios from "axios";
 
 const requestChatGpt = (description: String) =>{
     axios.post("api/chatGPT",
     {
         description: description
-    }).then((result)=>{
+    }).then((result : any)=>{
         console.log(result.data)
-    }).catch((e)=>{
+    }).catch((e : Error)=>{
         console.log(e)
     })
 }
